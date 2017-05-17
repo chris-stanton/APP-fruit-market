@@ -20,6 +20,7 @@ var player = {
 	cash : startingCash
 };
 
+
 var globalInterval;
 var globalGameLength;
 var gameLengthCounter = 0;
@@ -45,17 +46,17 @@ function init(){
 		var $el = $("#playerInformation").children().last();
 		$el.append("<p class='avg" + newFruit.name + "''>" + avgPriceText + "0</p>");
 		$el.append("<div id='" + newFruit.fruit + "'>" + newFruit.name + "</div>");
-		
+
 
 		var $child = $el.children().last();
 		$child.addClass("btn btn-success");
 		$child.addClass("fruitSellButton");
 		$child.data('fruit', newFruit.fruit);
 	}
-	
+
 	updatePlayerInfo();
 	enable();
-}	
+}
 
 function enable(){
 	globalInterval = setInterval(interval, timeInterval);
@@ -173,8 +174,8 @@ function Fruit(fruit, name, price) {
   	var positiveAdjustment = randomNumber(0,1);
   	if(positiveAdjustment == 0){
   		priceAdjustment = -priceAdjustment;
-  	} 
-  	this.price += priceAdjustment; 
+  	}
+  	this.price += priceAdjustment;
   	this.price = Math.floor(this.price * 100)/100;
 
   	if(this.price > maxFruitPrice) this.price = maxFruitPrice;
@@ -199,7 +200,7 @@ function updatePlayerInfo(){
 		}
 
 		$(".avg" + fruitObject.name).text(fruits[i].name + avgPriceText + avgPrice.toFixed(2));
-		
+
 	}
 }
 
@@ -209,10 +210,10 @@ function updatePlayerDollars(number){
 }
 
 function appendFruitButton(object){
-	var el = "<div class='btn btn-info buy-button' id='fruitButton" + object.name + "'>" + 
-				"<div class='fruit-image " + object.fruit + "'></div>" + 
-				"<div class='fruit-name'>" + object.name + "</div>" + 
-				"<div class='fruit-price'>" + object.price + "</div>" + 
+	var el = "<div class='btn btn-info buy-button' id='fruitButton" + object.name + "'>" +
+				"<div class='fruit-image " + object.fruit + "'></div>" +
+				"<div class='fruit-name'>" + object.name + "</div>" +
+				"<div class='fruit-price'>" + object.price + "</div>" +
 			 "</div>" ;
 
 	$("#purchaseBlock").append(el);
@@ -232,4 +233,3 @@ function checkAddZero(string){
 	}
 	return(string);
 }
-
