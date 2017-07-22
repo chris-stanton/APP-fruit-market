@@ -214,7 +214,7 @@ function appendFruitButton(object){
 				"<div class='fruit-image " + object.fruit + "'></div>" +
 				"<div class='fruit-name'>" + object.name + "</div>" +
 				"<div class='fruit-price'>" + object.price + "</div>" +
-			 "</div>" ;
+			 	"</div>" ;
 
 	$("#purchaseBlock").append(el);
 

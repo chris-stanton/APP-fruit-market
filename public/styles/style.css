@@ -30,25 +30,25 @@
 }
 
 .apples {
-	background: url("images/apple.png");
+	background: url("../assets/images/apple.png");
 	width: 69px;
 	height: 95px;
 }
 
 .bananas {
-	background: url("images/bananas.png");
+	background: url("../assets/images/bananas.png");
 	width: 83px;
 	height: 95px;
 }
 
 .oranges {
-	background: url("images/orange.png");
+	background: url("../assets/images/orange.png");
 	width: 84px;
 	height: 95px;
 }
 
 .pears {
-	background: url("images/pear.png");
+	background: url("../assets/images/pear.png");
 	width: 60px;
 	height: 95px;
 }
